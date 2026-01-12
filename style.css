@@ -1,0 +1,344 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-btn {
+  background: linear-gradient(90deg,#7b2cff,#ff7a18);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 4px;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: linear-gradient(90deg,#7b2cff,#ff7a18);
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.hero-desc {
+  max-width: 500px;
+}
+
+/* BOX SECTIONS */
+.box-section {
+  width: 80%;
+  margin: 40px auto;
+  padding: 40px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* ICONS */
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.icon {
+  padding: 12px 22px;
+  border-radius: 6px;
+  background: #eee;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.icon.active,
+.icon:hover {
+  background: linear-gradient(90deg,#7b2cff,#ff7a18);
+  color: white;
+}
+
+/* SKILL BARS */
+.skill {
+  width: 60%;
+  margin: 20px auto;
+  text-align: left;
+}
+
+.bar {
+  height: 10px;
+  background: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.bar div {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg,#7b2cff,#ff7a18);
+  transition: width 1.5s;
+}
+
+/* PROJECTS */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-card {
+  padding: 20px;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.project-card button {
+  background: linear-gradient(90deg,#7b2cff,#ff7a18);
+  border: none;
+  color: white;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 9999;              /* 🔥 ALWAYS ON TOP */
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;      /* modal accepts clicks */
+}
+body.modal-open {
+  overflow: hidden;          /* no scrolling */
+  pointer-events: none;      /* disable background clicks */
+}
+
+body.modal-open .modal {
+  pointer-events: auto;      /* allow modal clicks */
+}
+
+
+.modal-box {
+  background: white;
+  padding: 30px;
+  width: 420px;
+  border-radius: 8px;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+}
+
+/* CONTACT */
+.contact-box {
+  width: 350px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-box button {
+  background: linear-gradient(90deg,#7b2cff,#ff7a18);
+  border: none;
+  color: white;
+  padding: 8px;
+}
+
+/* SCROLL REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.9s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* SKILL BARS */
+.bar div {
+  width: 0;
+  transition: width 1.5s ease-in-out;
+}
+
+
+/* RESPONSIVE */
+@media (max-width:768px) {
+  .box-section { width: 95%; }
+}
+/* TOGGLE BUTTON */
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* DARK MODE */
+body.dark {
+  background: #0d0d0d;
+  color: #f1f1f1;
+}
+
+body.dark .box-section,
+body.dark .project-card,
+body.dark .contact-box,
+body.dark .modal-box {
+  background: #1a1a1a;
+  color: #f1f1f1;
+}
+
+body.dark .icon {
+  background: #333;
+}
+
+body.dark .icon.active,
+body.dark .icon:hover {
+  background: linear-gradient(90deg,#7b2cff,#ff7a18);
+}
+
+body.dark .navbar {
+  background: #111;
+}
+
+body.dark input,
+body.dark textarea {
+  background: #222;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+/* SMOOTH TRANSITION */
+body,
+.box-section,
+.project-card,
+.contact-box {
+  transition: background 0.3s, color 0.3s;
+}
+/* START EMPTY */
+.skill-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+/* WHEN ACTIVE */
+.skill-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* BAR STARTS EMPTY */
+.bar div {
+  width: 0;
+  transition: width 1.2s ease;
+}
+/* FOOTER */
+.footer {
+  margin-top: 80px;
+  padding: 30px 0;
+  text-align: center;
+  background: #f5f5f5;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+/* ICON BOX */
+.icon-box {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+
+/* BRAND COLORS */
+.icon-box.github {
+  background: #24292e;
+}
+
+.icon-box.linkedin {
+  background: #0077b5;
+}
+
+.icon-box.instagram {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
+.icon-box.twitter {
+  background: #1da1f2;
+}
+
+/* HOVER EFFECT */
+.icon-box:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* FOOTER TEXT */
+.footer-text {
+  font-size: 14px;
+  color: #555;
+}
+
+/* DARK MODE FOOTER */
+body.dark .footer {
+  background: #111;
+}
+
+body.dark .footer-text {
+  color: #aaa;
+}
+.connect-text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #333;
+}
+
+/* Dark mode support */
+body.dark .connect-text {
+  color: #f1f1f1;
+}

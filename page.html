@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Renuka | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Dasari Renuka</div>
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="RENUKA__DEVELOPER.pdf" download class="nav-btn">Resume</a>
+    <button class="toggle-btn" onclick="toggleTheme()">🌙</button>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero reveal">
+  <img src="images/picc.jpeg" class="profile">
+  <h1>Hello, I am <span> Dasari Renuka,</span></h1><h2 class="typing"></h2>
+  <p class="hero-desc">
+    Passionate about building intelligent systems and modern web experiences.AI and Machine Learning enthusiast and B.Tech CSE final-year student with hands-on experience in building and evaluating Machine Learning models and working on NLP-based datasets. Recently worked as an AI Developer Intern on Telugu Large Language Models. Strong foundation in Python, ML algorithms, and data preprocessing with a keen interest in real-world AI applications. 
+  </p>
+</section>
+
+
+
+<!-- SKILLS ICONS -->
+<!-- SKILLS ICONS -->
+<section id="skills" class="box-section reveal skills-icons">
+  <h2>Skills</h2>
+  <div class="icons">
+    <div class="icon ">AI</div>
+    <div class="icon ">ML</div>
+    <div class="icon">Python</div>
+    <div class="icon">HTML</div>
+    <div class="icon">CSS</div>
+    <div class="icon">JavaScript</div>
+  </div>
+</section>
+
+<!-- PROGRAMMING LANGUAGES -->
+<!-- PROGRAMMING LANGUAGES -->
+<section class="box-section reveal skills-bars">
+  <h2>Programming Languages</h2>
+
+  <div class="skill skill-item">
+    <span>Python</span>
+    <div class="bar"><div data-width="90%"></div></div>
+  </div>
+
+  <div class="skill skill-item">
+    <span>HTML</span>
+    <div class="bar"><div data-width="95%"></div></div>
+  </div>
+
+  <div class="skill skill-item">
+    <span>CSS</span>
+    <div class="bar"><div data-width="85%"></div></div>
+  </div>
+
+  <div class="skill skill-item">
+    <span>JavaScript</span>
+    <div class="bar"><div data-width="80%"></div></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="box-section reveal">
+  <h2>Projects</h2>
+
+  <div class="project-list">
+    <div class="project-card">
+      <h3>AI Chatbot</h3>
+      <p>Conversational AI system</p>
+      <button onclick="openModal(0)">Know More</button>
+    </div>
+
+    <div class="project-card">
+      <h3> Detection of Fake Bank Currency</h3>
+      <p>Detecting Frauds</p>
+      <button onclick="openModal(1)">Know More</button>
+    </div>
+
+    <div class="project-card">
+      <h3>Detection of Stroke Disease</h3>
+      <p>ML system to predict</p>
+      <button onclick="openModal(2)">Know More</button>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <span class="close" onclick="closeModal()">✖</span>
+    <h3 id="modal-title"></h3>
+    <p id="modal-description"></p>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="box-section reveal">
+  <h2>Contact Me</h2>
+
+  <form id="contactForm" class="contact-box" onsubmit="sendMessage(event)">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button>Send Message</button>
+  </form>
+
+  <p id="success-msg"></p>
+</section>
+<footer class="footer">
+      <h3 class="connect-text">Let’s Connect!</h3>
+
+  <div class="footer-icons">
+
+    <a href="https://github.com/renuvarma67" target="_blank" class="icon-box github">
+      <i class="fab fa-github"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/in/dasari-renuka-/" target="_blank" class="icon-box linkedin">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <a href="https://www.instagram.com/renu_varma_67" target="_blank" class="icon-box instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://twitter.com/renuka_dasari67" target="_blank" class="icon-box twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+
+  </div>
+
+  <p class="footer-text">© 2026 Dasari Renuka</p>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
