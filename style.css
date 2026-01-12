@@ -8,7 +8,6 @@ body {
   color: #333;
 }
 
-/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -28,7 +27,6 @@ body {
   border-radius: 4px;
 }
 
-/* HERO */
 .hero {
   height: 90vh;
   background: linear-gradient(90deg,#7b2cff,#ff7a18);
@@ -52,7 +50,6 @@ body {
   max-width: 500px;
 }
 
-/* BOX SECTIONS */
 .box-section {
   width: 80%;
   margin: 40px auto;
@@ -62,7 +59,6 @@ body {
   text-align: center;
 }
 
-/* ICONS */
 .icons {
   display: flex;
   justify-content: center;
@@ -84,7 +80,6 @@ body {
   color: white;
 }
 
-/* SKILL BARS */
 .skill {
   width: 60%;
   margin: 20px auto;
@@ -105,7 +100,6 @@ body {
   transition: width 1.5s;
 }
 
-/* PROJECTS */
 .project-list {
   display: flex;
   flex-direction: column;
@@ -126,7 +120,6 @@ body {
   cursor: pointer;
 }
 
-/* MODAL */
 .modal {
   display: none;
   position: fixed;
@@ -159,7 +152,6 @@ body.modal-open .modal {
   cursor: pointer;
 }
 
-/* CONTACT */
 .contact-box {
   width: 350px;
   margin: auto;
@@ -175,7 +167,6 @@ body.modal-open .modal {
   padding: 8px;
 }
 
-/* SCROLL REVEAL */
 .reveal {
   opacity: 0;
   transform: translateY(50px);
@@ -187,18 +178,15 @@ body.modal-open .modal {
   transform: translateY(0);
 }
 
-/* SKILL BARS */
 .bar div {
   width: 0;
   transition: width 1.5s ease-in-out;
 }
 
 
-/* RESPONSIVE */
 @media (max-width:768px) {
   .box-section { width: 95%; }
 }
-/* TOGGLE BUTTON */
 .toggle-btn {
   background: none;
   border: none;
@@ -207,7 +195,6 @@ body.modal-open .modal {
   margin-left: 10px;
 }
 
-/* DARK MODE */
 body.dark {
   background: #0d0d0d;
   color: #f1f1f1;
@@ -241,32 +228,27 @@ body.dark textarea {
   border: 1px solid #444;
 }
 
-/* SMOOTH TRANSITION */
 body,
 .box-section,
 .project-card,
 .contact-box {
   transition: background 0.3s, color 0.3s;
 }
-/* START EMPTY */
 .skill-item {
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.6s ease;
 }
 
-/* WHEN ACTIVE */
 .skill-item.show {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* BAR STARTS EMPTY */
 .bar div {
   width: 0;
   transition: width 1.2s ease;
 }
-/* FOOTER */
 .footer {
   margin-top: 80px;
   padding: 30px 0;
@@ -281,7 +263,6 @@ body,
   margin-bottom: 10px;
 }
 
-/* ICON BOX */
 .icon-box {
   width: 44px;
   height: 44px;
@@ -294,7 +275,6 @@ body,
   transition: 0.3s ease;
 }
 
-/* BRAND COLORS */
 .icon-box.github {
   background: #24292e;
 }
@@ -311,19 +291,16 @@ body,
   background: #1da1f2;
 }
 
-/* HOVER EFFECT */
 .icon-box:hover {
   transform: translateY(-6px) scale(1.05);
   box-shadow: 0 8px 18px rgba(0,0,0,0.2);
 }
 
-/* FOOTER TEXT */
 .footer-text {
   font-size: 14px;
   color: #555;
 }
 
-/* DARK MODE FOOTER */
 body.dark .footer {
   background: #111;
 }
@@ -338,7 +315,7 @@ body.dark .footer-text {
   color: #333;
 }
 
-/* Dark mode support */
 body.dark .connect-text {
   color: #f1f1f1;
 }
+
