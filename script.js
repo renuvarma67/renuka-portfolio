@@ -1,6 +1,4 @@
-/* =================================
-   PROJECT DATA (3 PROJECTS)
-================================= */
+
 const projects = [
   {
     title: "AI Chatbot",
@@ -12,14 +10,11 @@ const projects = [
     description:
        "Developed and compared ML models (Logistic Regression, Random Forest, SVM) to detect counterfeit currency using Python and Scikit-learn, achieving high accuracy in classification and fraud detection. " },
   {
-    title: "ML Prediction App",
+    title: "Detection of Stroke Disease ",
     description:
       "Built and trained ML models to predict stroke risk based on medical data through data preprocessing and model evaluation using Python. "  }
 ];
 
-/* =================================
-   PROJECT MODAL FUNCTIONS
-================================= */
 function openModal(index) {
   document.getElementById("modal-title").innerText = projects[index].title;
   document.getElementById("modal-description").innerText = projects[index].description;
@@ -36,9 +31,7 @@ function closeModal() {
   document.body.classList.remove("modal-open");
 }
 
-/* =================================
-   CONTACT FORM
-================================= */
+
 function sendMessage(e) {
   e.preventDefault();
   const msg = document.getElementById("success-msg");
@@ -47,9 +40,7 @@ function sendMessage(e) {
   if (form) form.reset();
 }
 
-/* =================================
-   SKILLS ICON ACTIVE TOGGLE
-================================= */
+
 document.querySelectorAll(".icon").forEach(icon => {
   icon.addEventListener("click", () => {
     document.querySelectorAll(".icon").forEach(i =>
@@ -59,9 +50,7 @@ document.querySelectorAll(".icon").forEach(icon => {
   });
 });
 
-/* =================================
-   STAGGERED SKILLS (ONE BY ONE)
-================================= */
+
 const skillsSection = document.querySelector(".skills-bars");
 const skillItems = document.querySelectorAll(".skill-item");
 
@@ -87,9 +76,7 @@ if (skillsSection) {
   skillObserver.observe(skillsSection);
 }
 
-/* =================================
-   SCROLL REVEAL FOR SECTIONS
-================================= */
+
 const revealObserver = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
@@ -105,9 +92,7 @@ document.querySelectorAll(".reveal").forEach(section => {
   revealObserver.observe(section);
 });
 
-/* =================================
-   ROLES BESIDE NAME (ONE BY ONE)
-================================= */
+
 const typingEl = document.querySelector(".typing");
 
 if (typingEl) {
@@ -128,9 +113,7 @@ if (typingEl) {
   setInterval(changeRole, 2000);
 }
 
-/* =================================
-   DARK / LIGHT TOGGLE
-================================= */
+
 function toggleTheme() {
   document.body.classList.toggle("dark");
   const btn = document.querySelector(".toggle-btn");
@@ -138,3 +121,4 @@ function toggleTheme() {
     btn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
   }
 }
+
